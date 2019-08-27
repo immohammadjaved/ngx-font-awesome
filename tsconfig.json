@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-font-awesome": [
+        "dist/ngx-font-awesome"
+      ],
+      "ngx-font-awesome/*": [
+        "dist/ngx-font-awesome/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

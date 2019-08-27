@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "ngx-font-awesome": {
+      "projectType": "library",
+      "root": "projects/ngx-font-awesome",
+      "sourceRoot": "projects/ngx-font-awesome/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-font-awesome/tsconfig.lib.json",
+            "project": "projects/ngx-font-awesome/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-font-awesome/src/test.ts",
+            "tsConfig": "projects/ngx-font-awesome/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-font-awesome/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-font-awesome/tsconfig.lib.json",
+              "projects/ngx-font-awesome/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-font-awesome-app"
 }
