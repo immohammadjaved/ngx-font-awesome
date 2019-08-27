@@ -1,9 +1,41 @@
 {
   "name": "ngx-font-awesome",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": "Mohammad Javed",
+  "description": "Simple, easy to use Angular component to manage Font Awesome icons.",
+  "keywords": [
+    "ngx-font-awesome",
+    "ng4-font-awesome",
+    "ng5-font-awesome",
+    "ng6-font-awesome",
+    "ng7-font-awesome",
+    "ng8-font-awesome",
+    "ng2-fontawesome",
+    "ng2-fontawesome",
+    "ng2-font-awesome",
+    "ng-font-awesome",
+    "ng-fontawesome",
+    "font-awesome",
+    "fontawesome",
+    "font awesome",
+    "angular",
+    "angular2",
+    "ng",
+    "ng2",
+    "angular2-font-awesome",
+    "angular-font-awesome",
+    "angular4-font-awesome",
+    "angular4 font awesome",
+    "angular font awesome"
+  ],
+  "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url": "https://github.com/immohammadjaved/ngx-font-awesome.git"
+  },
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0",
-    "font-awesome": "^4.7.0"
+    "@angular/common": ">=6.0.0",
+    "@angular/core": ">=6.0.0",
+    "font-awesome": "<=4.7.0"
   }
 }

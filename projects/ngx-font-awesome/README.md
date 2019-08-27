@@ -1,24 +1,65 @@
-# NgxFontAwesome
+**NOTE: Support for this library has stopped at FontAwesome 4.7. If you are using FontAwesome 5+ use FontAwesome's own Angular library. [link](https://github.com/FortAwesome/angular-fontawesome)**
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+# Ngx Font Awesome
+Simple, easy to use [Angular](https://angular.io) component to manage Font Awesome icons.
 
-## Code scaffolding
+# How to install
 
-Run `ng generate component component-name --project ngx-font-awesome` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-font-awesome`.
-> Note: Don't forget to add `--project ngx-font-awesome` or else it will be added to the default project in your `angular.json` file. 
+**Install Packages**
+`npm install --save font-awesome ngx-font-awesome`
 
-## Build
+**Import the module:**
+```typescript
+//...
+import { NgxFontAwesomeModule } from 'ngx-font-awesome';
+@NgModule({
+  //...
+  imports: [
+    //...
+    NgxFontAwesomeModule
+  ],
+  //...
+})
+export class AppModule { }
+```
 
-Run `ng build ngx-font-awesome` to build the project. The build artifacts will be stored in the `dist/` directory.
+**If you're using [Angular CLI](https://github.com/angular/angular-cli), add the font-awesome CSS to `styles` inside the `angular-cli.json`**
+```json
+"styles": [
+    "styles.css",
+    "../node_modules/font-awesome/css/font-awesome.css"
+],
+```
+**If you're using [Angular CLI](https://github.com/angular/angular-cli) 6.0.0, add the font-awesome CSS to `styles` inside the `angular.json`**
+```json
+"styles": [
+    "styles.css",
+    "./node_modules/font-awesome/css/font-awesome.css"
+],
+```
 
-## Publishing
+*NOTE: If using SCSS preprocessor just change the `css` for `scss`*
 
-After building your library with `ng build ngx-font-awesome`, go to the dist folder `cd dist/ngx-font-awesome` and run `npm publish`.
 
-## Running unit tests
+**If you're not using the CLI, import the stylesheet to your `index.html` file**
+```html
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+```
 
-Run `ng test ngx-font-awesome` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Usage and options
 
-## Further help
+Name           | Type               | Options                                   | Optional
+---            | ---                | ---                                       | ---
+name           | `String`           | [F-A Icons](http://fontawesome.io/icons/) | No
+size           | `String`           | `lg, 2x, 3x, 4x, 5x`                      | Yes
+animation      | `Boolean`          | `true, false`                             | Yes
+rotate         | `Number`           | `90, 180, 270`                            | Yes
+flip           | `String`           | `vertical, horizontal`                    | Yes
+fixed          | `Boolean`          | `true, false`                             | Yes
+border         | `Boolean`          | `true, false`                             | Yes
+customClass    | `String`           | `eg: custom`                              | Yes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*Example Use*
+```html
+<ngx-fa name="cog" [animation]="true"></ngx-fa>
+```

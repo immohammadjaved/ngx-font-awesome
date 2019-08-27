@@ -1,27 +1,65 @@
-# NgxFontAwesomeApp
+**NOTE: Support for this library has stopped at FontAwesome 4.7. If you are using FontAwesome 5+ use FontAwesome's own Angular library. [link](https://github.com/FortAwesome/angular-fontawesome)**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+# Ngx Font Awesome
+Simple, easy to use [Angular](https://angular.io) component to manage Font Awesome icons.
 
-## Development server
+# How to install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Install Packages**
+`npm install --save font-awesome ngx-font-awesome`
 
-## Code scaffolding
+**Import the module:**
+```typescript
+//...
+import { NgxFontAwesomeModule } from 'ngx-font-awesome';
+@NgModule({
+  //...
+  imports: [
+    //...
+    NgxFontAwesomeModule
+  ],
+  //...
+})
+export class AppModule { }
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**If you're using [Angular CLI](https://github.com/angular/angular-cli), add the font-awesome CSS to `styles` inside the `angular-cli.json`**
+```json
+"styles": [
+    "styles.css",
+    "../node_modules/font-awesome/css/font-awesome.css"
+],
+```
+**If you're using [Angular CLI](https://github.com/angular/angular-cli) 6.0.0, add the font-awesome CSS to `styles` inside the `angular.json`**
+```json
+"styles": [
+    "styles.css",
+    "./node_modules/font-awesome/css/font-awesome.css"
+],
+```
 
-## Build
+*NOTE: If using SCSS preprocessor just change the `css` for `scss`*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+**If you're not using the CLI, import the stylesheet to your `index.html` file**
+```html
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Usage and options
 
-## Running end-to-end tests
+Name           | Type               | Options                                   | Optional
+---            | ---                | ---                                       | ---
+name           | `String`           | [F-A Icons](http://fontawesome.io/icons/) | No
+size           | `String`           | `lg, 2x, 3x, 4x, 5x`                      | Yes
+animation      | `Boolean`          | `true, false`                             | Yes
+rotate         | `Number`           | `90, 180, 270`                            | Yes
+flip           | `String`           | `vertical, horizontal`                    | Yes
+fixed          | `Boolean`          | `true, false`                             | Yes
+border         | `Boolean`          | `true, false`                             | Yes
+customClass    | `String`           | `eg: custom`                              | Yes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*Example Use*
+```html
+<ngx-fa name="cog" [animation]="true"></ngx-fa>
+```
