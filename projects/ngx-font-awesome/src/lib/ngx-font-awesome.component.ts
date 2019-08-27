@@ -1,19 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-font-awesome',
+  selector: 'ngx-fa',
   template: `
-    <p>
-      ngx-font-awesome works!
-    </p>
+    <i class="fa fa-{{ name }}"
+      [ngClass]="getClasses()"
+      [class.fa-fw]="fixed"
+      [class.fa-border]="border"
+      [class.fa-spin]="animation"
+      aria-hidden="true">
+    </i>
   `,
-  styles: []
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxFontAwesomeComponent implements OnInit {
-
+  @Input() name: string;
+  @Input() size: string;
+  @Input() animation: boolean;
+  @Input() rotate: number;
+  @Input() flip: string;
+  @Input() fixed: boolean;
+  @Input() border: boolean;
+  @Input() customClass: string;
+  classes: string = '';
   constructor() { }
 
   ngOnInit() {
   }
 
+  getClasses() {
+    (this.size) ? this.classes += `fa-${this.size} ` : '';
+    (this.rotate) ? this.classes += `fa-rotate-${this.rotate} ` : '';
+    (this.flip) ? this.classes += `fa-flip-${this.flip} ` : '';
+    (this.customClass) ? this.classes += `${this.customClass} ` : '';
+    return this.classes;
+  }
 }
