@@ -1,4 +1,3 @@
-**NOTE: Support for this library has stopped at FontAwesome 4.7. If you are using FontAwesome 5+ use FontAwesome's own Angular library. [link](https://github.com/FortAwesome/angular-fontawesome)**
 
 # Ngx Font Awesome
 Simple, easy to use [Angular](https://angular.io) component to manage Font Awesome icons.
@@ -6,7 +5,7 @@ Simple, easy to use [Angular](https://angular.io) component to manage Font Aweso
 # How to install
 
 **Install Packages**
-`npm install --save font-awesome ngx-font-awesome`
+`npm install ngx-font-awesome font-awesome --save`
 
 **Import the module:**
 ```typescript
@@ -23,13 +22,6 @@ import { NgxFontAwesomeModule } from 'ngx-font-awesome';
 export class AppModule { }
 ```
 
-**If you're using [Angular CLI](https://github.com/angular/angular-cli), add the font-awesome CSS to `styles` inside the `angular-cli.json`**
-```json
-"styles": [
-    "styles.css",
-    "../node_modules/font-awesome/css/font-awesome.css"
-],
-```
 **If you're using [Angular CLI](https://github.com/angular/angular-cli) 6.0.0, add the font-awesome CSS to `styles` inside the `angular.json`**
 ```json
 "styles": [
@@ -37,6 +29,16 @@ export class AppModule { }
     "./node_modules/font-awesome/css/font-awesome.css"
 ],
 ```
+
+
+**If you're using [Angular CLI](https://github.com/angular/angular-cli), add the font-awesome CSS to `styles` inside the `angular-cli.json`**
+```json
+"styles": [
+    "styles.css",
+    "../node_modules/font-awesome/css/font-awesome.css"
+],
+```
+
 
 *NOTE: If using SCSS preprocessor just change the `css` for `scss`*
 
@@ -47,6 +49,7 @@ export class AppModule { }
 ```
 
 # Usage and options
+*NOTE: Pass boolean values with square brackets `[]`
 
 Name           | Type               | Options                                   | Optional
 ---            | ---                | ---                                       | ---
@@ -61,5 +64,5 @@ customClass    | `String`           | `eg: custom`                              
 
 *Example Use*
 ```html
-<ngx-fa name="cog" [animation]="true"></ngx-fa>
+<ngx-fa name="cog" [animation]="true" size="lg"></ngx-fa>
 ```

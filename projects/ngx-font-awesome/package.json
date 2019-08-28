@@ -1,6 +1,6 @@
 {
   "name": "ngx-font-awesome",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Mohammad Javed",
   "description": "Simple, easy to use Angular component to manage Font Awesome icons.",
   "keywords": [

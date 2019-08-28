@@ -29,6 +29,10 @@ export class NgxFontAwesomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * getClasses()
+   * Function will return Options in class form
+   */
   getClasses() {
     (this.size) ? this.classes += `fa-${this.size} ` : '';
     (this.rotate) ? this.classes += `fa-rotate-${this.rotate} ` : '';
